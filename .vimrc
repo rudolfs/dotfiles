@@ -32,6 +32,10 @@ set t_Co=256
 highlight RedundantWhitespace ctermbg=red guibg=red
 match RedundantWhitespace /\s\+$\| \+\ze\t/
 
+" Highlight lines longer thatn 79 characters
+highlight OverLength ctermbg=darkgrey ctermfg=black
+2match OverLength /\%80v.\+/
+
 set expandtab
 set tabstop=2 shiftwidth=2 softtabstop=2
 set autoindent
