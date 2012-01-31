@@ -15,6 +15,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'The-NERD-tree'
+Bundle 'Markdown'
 
 filetype plugin indent on
 
