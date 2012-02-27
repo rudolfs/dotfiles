@@ -3,6 +3,10 @@
 " ============
 
 set nocompatible
+
+" workaround for vim 7.2 on os X, see:
+" https://github.com/gmarik/vundle/wiki
+filetype on
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
