@@ -20,6 +20,7 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'The-NERD-tree'
 Bundle 'Markdown'
+Bundle 'Townk/vim-autoclose'
 
 filetype plugin indent on
 
@@ -32,6 +33,11 @@ syntax on
 colorscheme zenburn
 set t_Co=256
 
+" fixes long timeout when opening a line above with:
+" <ESC> <SHIFT> + o
+" http://code.google.com/p/vim/issues/detail?id=24
+set timeout timeoutlen=5000 ttimeoutlen=100
+
 " Highlight unwanted whitespace
 highlight RedundantWhitespace ctermbg=red guibg=red
 match RedundantWhitespace /\s\+$\| \+\ze\t/
@@ -43,6 +49,12 @@ highlight OverLength ctermbg=darkgrey ctermfg=black
 set expandtab
 set tabstop=2 shiftwidth=2 softtabstop=2
 set autoindent
+
+if has("autocmd")
+  autocmd FileType javascript setlocal tabstop=4
+  autocmd FileType javascript setlocal shiftwidth=4
+  autocmd FileType javascript setlocal softtabstop=4
+endif
 
 set hlsearch            " highlight searches
 set incsearch           " do incremental searching
@@ -63,13 +75,45 @@ map 'r :%s/<C-r><C-w>//gc<Left><Left><Left>
 map 'R :%s/\s\+$\\| \+\ze\t//g<CR>
 
 " Toggle paste mode
-map 'p :set invpaste<CR>
+map 'i :set paste<CR>i
+
+" Always disable paste mode when leaving insert mode
+au InsertLeave * :set nopaste
 
 " Proper RABL syntax highlighting
 au BufRead,BufNewFile *.rabl setf ruby
 
-" unmap stupid man page lookup
+" Unmap stupid man page lookup
 map K <nop>
+
+
+" ===========
+" vimbits.com
+" ===========
+
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
+" Easy split navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Resize splits when the window is resized
+au VimResized * exe "normal! \<c-w>="
+
+" Spellcheck Git commit messages
+autocmd BufRead COMMIT_EDITMSG setlocal spell!
+
+" Better comand-line editing
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+
+" Insert blank lines without going into insert mode
+nmap t o<ESC>k
+nmap T O<ESC>j
 
 
 " =============
@@ -77,8 +121,10 @@ map K <nop>
 " =============
 
 " NERDTree
-map \ :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
+map \ :NERDTreeToggle<CR>
+" show current file in nerdtree
+map <silent> <bar> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 
 " Buffer explorer
 map <C-f> :FufCoverageFile<CR>
