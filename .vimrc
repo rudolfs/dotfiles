@@ -36,7 +36,7 @@ set t_Co=256
 " fixes long timeout when opening a line above with:
 " <ESC> <SHIFT> + o
 " http://code.google.com/p/vim/issues/detail?id=24
-set timeout timeoutlen=100 ttimeoutlen=100
+set timeout timeoutlen=200 ttimeoutlen=100
 
 " Highlight unwanted whitespace
 highlight RedundantWhitespace ctermbg=red guibg=red
