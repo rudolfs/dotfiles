@@ -19,7 +19,6 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'The-NERD-tree'
-Bundle 'Markdown'
 Bundle 'Townk/vim-autoclose'
 
 filetype plugin indent on
@@ -85,6 +84,11 @@ au BufRead,BufNewFile *.rabl setf ruby
 
 " Unmap stupid man page lookup
 map K <nop>
+
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
 
 
 " ===========
