@@ -20,6 +20,7 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'The-NERD-tree'
 Bundle 'Townk/vim-autoclose'
+Bundle 'walm/jshint.vim'
 
 filetype plugin indent on
 
@@ -139,6 +140,10 @@ map <F1> :vert bo help<CR>
 map 'b :Gblame<CR>
 map 'd :Gdiff<CR>
 map 's :Gstatus<CR>
+
+" JSHint
+
+map 'j :JSHint<CR>
 
 " Powerline
 set laststatus=2
