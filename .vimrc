@@ -16,11 +16,11 @@ Bundle 'gmarik/vundle'
 Bundle 'jnurmine/Zenburn'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
 Bundle 'The-NERD-tree'
 Bundle 'Townk/vim-autoclose'
 Bundle 'walm/jshint.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'rking/ag.vim'
 
 filetype plugin indent on
 
@@ -33,6 +33,9 @@ syntax on
 colorscheme zenburn
 set t_Co=256
 
+" make backspace work in vim 7.4
+set backspace=2
+
 " fixes long timeout when opening a line above with:
 " <ESC> <SHIFT> + o
 " http://code.google.com/p/vim/issues/detail?id=24
@@ -43,8 +46,10 @@ highlight RedundantWhitespace ctermbg=red guibg=red
 match RedundantWhitespace /\s\+$\| \+\ze\t/
 
 " Highlight lines longer thatn 79 characters
-highlight OverLength ctermbg=darkgrey ctermfg=black
-2match OverLength /\%80v.\+/
+"match Error /\%81v.\+/
+
+" This works in vim 7.3+
+set colorcolumn=80
 
 set expandtab
 set tabstop=2 shiftwidth=2 softtabstop=2
@@ -131,11 +136,6 @@ map \ :NERDTreeToggle<CR>
 " show current file in nerdtree
 map <silent> <bar> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 
-" Buffer explorer
-map <C-f> :FufCoverageFile<CR>
-map <C-b> :FufBuffer<CR>
-map <F1> :vert bo help<CR>
-
 " fugitive
 map 'b :Gblame<CR>
 map 'd :Gdiff<CR>
@@ -148,3 +148,12 @@ map 'j :JSHint<CR>
 " Powerline
 set laststatus=2
 let Powerline_symbols="unicode"
+
+" Use ag over grep
+set grepprg=ag\ --nogroup\ --nocolor
+
+nnoremap <C-f> :Ag<SPACE>
+
+" CtrlP
+let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_regexp = 1
