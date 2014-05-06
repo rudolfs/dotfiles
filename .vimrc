@@ -21,6 +21,7 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'walm/jshint.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
+Bundle 'leafgarland/typescript-vim'
 
 filetype plugin indent on
 
