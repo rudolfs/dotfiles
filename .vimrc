@@ -18,10 +18,10 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'The-NERD-tree'
 Bundle 'Townk/vim-autoclose'
-Bundle 'walm/jshint.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
 Bundle 'leafgarland/typescript-vim'
+Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on
 
@@ -142,10 +142,6 @@ map 'b :Gblame<CR>
 map 'd :Gdiff<CR>
 map 's :Gstatus<CR>
 
-" JSHint
-
-map 'j :JSHint<CR>
-
 " Powerline
 set laststatus=2
 let Powerline_symbols="unicode"
@@ -164,3 +160,5 @@ let g:ctrlp_show_hidden = 1         " Include hidden files & folders
 
 " Faster syntax highlighting
 syntax sync minlines=200
+
+let g:syntastic_ruby_checkers = ['rubocop']
