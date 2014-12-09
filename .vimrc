@@ -9,20 +9,22 @@ set nocompatible
 filetype on
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'jnurmine/Zenburn'
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'The-NERD-tree'
-Bundle 'Townk/vim-autoclose'
-Bundle 'kien/ctrlp.vim'
-Bundle 'rking/ag.vim'
-Bundle 'leafgarland/typescript-vim'
-Bundle 'scrooloose/syntastic'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'jnurmine/Zenburn'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'The-NERD-tree'
+Plugin 'Townk/vim-autoclose'
+Plugin 'kien/ctrlp.vim'
+Plugin 'rking/ag.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'fatih/vim-go'
 
+call vundle#end()
 filetype plugin indent on
 
 
