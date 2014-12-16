@@ -32,6 +32,7 @@ filetype plugin indent on
 " Vim config
 " ==========
 
+runtime macros/matchit.vim
 syntax on
 colorscheme zenburn
 set t_Co=256
