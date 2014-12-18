@@ -22,7 +22,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/syntastic'
-Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
