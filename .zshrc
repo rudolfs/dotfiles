@@ -9,6 +9,7 @@ source $ZSH/oh-my-zsh.sh
 alias g='ag'
 alias sl='ls'
 alias v='nvim'
+alias vim='nvim'
 alias gco='git checkout'
 
 # Git
