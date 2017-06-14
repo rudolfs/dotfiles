@@ -8,7 +8,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias g='ag'
 alias sl='ls'
-alias v='vim'
+alias v='nvim'
 alias gco='git checkout'
 
 # Git
@@ -20,3 +20,5 @@ alias gst='git status'
 alias grp='git pull --rebase && git push'
 alias gb='git branch'
 alias gp='git pull'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
