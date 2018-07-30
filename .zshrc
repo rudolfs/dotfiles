@@ -6,7 +6,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-alias g='ag'
+alias g='rg'
 alias sl='ls'
 alias v='nvim'
 alias vim='nvim'
