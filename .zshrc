@@ -3,7 +3,7 @@ export ZSH=/Users/rudolfs/.oh-my-zsh
 export EDITOR=nvim
 ZSH_THEME="rudolfs"
 
-plugins=(git)
+plugins=(git ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
