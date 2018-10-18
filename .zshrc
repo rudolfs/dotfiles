@@ -1,5 +1,6 @@
 export ZSH=/Users/rudolfs/.oh-my-zsh
 
+export EDITOR=nvim
 ZSH_THEME="rudolfs"
 
 plugins=(git)
