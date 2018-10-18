@@ -13,6 +13,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'eagletmt/ghcmod-vim'
 call plug#end()
 
 " ==========
@@ -122,5 +123,6 @@ nnoremap <C-f> :Ag<SPACE>
 syntax sync minlines=200
 
 let g:syntastic_ruby_checkers = ['rubocop', 'tslint', 'reek']
+let g:syntastic_haskell_checkers = ['hdevtools', 'hlint', 'ghc_mod']
 
 nmap <C-P> :FZF<CR>
