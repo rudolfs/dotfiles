@@ -14,6 +14,8 @@ Plug 'mxw/vim-jsx'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'eagletmt/ghcmod-vim'
+Plug 'mg979/vim-visual-multi'
+Plug 'machakann/vim-highlightedyank'
 call plug#end()
 
 " ==========
@@ -126,3 +128,6 @@ let g:syntastic_ruby_checkers = ['rubocop', 'tslint', 'reek']
 let g:syntastic_haskell_checkers = ['hdevtools', 'hlint', 'ghc_mod']
 
 nmap <C-P> :FZF<CR>
+
+" set yank highlight duration
+let g:highlightedyank_highlight_duration = 300
