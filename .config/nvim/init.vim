@@ -69,11 +69,6 @@ map K <nop>
 :command W w
 :command Q q
 
-
-" ===========
-" vimbits.com
-" ===========
-
 " Reselect visual block after indent/outdent
 vnoremap < <gv
 vnoremap > >gv
