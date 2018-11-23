@@ -5,7 +5,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'jiangmiao/auto-pairs'
-Plug 'rking/ag.vim'
 Plug 'scrooloose/syntastic'
 Plug 'rainerborene/vim-reek'
 Plug 'pangloss/vim-javascript'
@@ -15,6 +14,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'mg979/vim-visual-multi'
 Plug 'machakann/vim-highlightedyank'
+Plug 'jremmen/vim-ripgrep'
 call plug#end()
 
 " ==========
@@ -113,12 +113,12 @@ map <silent> <bar> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 " fugitive
 map 'b :Gblame<CR>
 
-" Use ag over grep
-set grepprg=ag\ --nogroup\ --nocolor
+" Use ripgrep over grep
+set grepprg=rg
 
 " Airline
 let g:airline_theme='zenburn'
-nnoremap <C-f> :Ag<SPACE>
+nnoremap <C-f> :Rg<SPACE>
 
 " Faster syntax highlighting
 syntax sync minlines=200
