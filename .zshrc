@@ -7,7 +7,7 @@ plugins=(git ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
-alias g='rg'
+alias g='rg -i'
 alias sl='ls'
 alias v='nvim'
 alias vim='nvim'
