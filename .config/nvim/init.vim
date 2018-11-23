@@ -112,20 +112,20 @@ map <silent> <bar> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 " fugitive
 map 'b :Gblame<CR>
 
-" Use ripgrep over grep
+" ripgrep
 set grepprg=rg
+nnoremap <C-f> :Rg<SPACE>
 
 " Airline
 let g:airline_theme='zenburn'
-nnoremap <C-f> :Rg<SPACE>
 
 " Faster syntax highlighting
 syntax sync minlines=200
+
+" set yank highlight duration
+let g:highlightedyank_highlight_duration = 300
 
 let g:syntastic_ruby_checkers = ['rubocop', 'tslint', 'reek']
 let g:syntastic_haskell_checkers = ['hdevtools', 'hlint', 'ghc_mod']
 
 nmap <C-P> :FZF<CR>
-
-" set yank highlight duration
-let g:highlightedyank_highlight_duration = 300
