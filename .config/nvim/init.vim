@@ -1,10 +1,9 @@
-" download vim-plug if missing
+" Download and install vim-plug if missing
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent! !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   silent! autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'jnurmine/Zenburn'
@@ -23,10 +22,6 @@ Plug 'eagletmt/ghcmod-vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'jremmen/vim-ripgrep'
 call plug#end()
-
-" ==========
-" Vim config
-" ==========
 
 syntax on
 set mouse-=a
@@ -100,11 +95,6 @@ cnoremap <C-e> <End>
 " Insert blank lines without going into insert mode
 nmap t o<ESC>k
 nmap T O<ESC>j
-
-
-" =============
-" Plugin config
-" =============
 
 " NERDTree
 let NERDTreeQuitOnOpen=1
