@@ -6,3 +6,7 @@ all: link
 link:
 	ln -fs $(DOTFILES_DIR)/zsh/.zshrc $(HOME)/.zshrc
 	ln -fs $(DOTFILES_DIR)/nvim $(HOME)/.config/nvim
+
+install:
+	brew install fzy
+	brew install rg

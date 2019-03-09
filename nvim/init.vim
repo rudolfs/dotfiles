@@ -16,8 +16,7 @@ Plug 'scrooloose/syntastic'
 Plug 'rainerborene/vim-reek'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'cloudhead/neovim-fuzzy'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'jremmen/vim-ripgrep'
@@ -50,8 +49,8 @@ let g:syntastic_haskell_checkers=['hdevtools', 'hlint', 'ghc_mod']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_check_on_wq = 0
 
-" Fuzzyfinder
-nmap <C-P> :FZF<CR>
+" Fzy
+nnoremap <C-p> :FuzzyOpen<CR>
 
 
 " Look & feel
