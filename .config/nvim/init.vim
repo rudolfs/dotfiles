@@ -126,7 +126,7 @@ au VimResized * exe "normal! \<c-w>="
 
 " Highlight unwanted whitespace
 highlight RedundantWhitespace ctermbg=red guibg=red
-match RedundantWhitespace /\s\+$\| \+\ze\t/
+autocmd VimEnter,WinEnter * match RedundantWhitespace /\s\+$\| \+\ze\t/
 
 " Proper RABL syntax highlighting
 au BufRead,BufNewFile *.rabl setf ruby
