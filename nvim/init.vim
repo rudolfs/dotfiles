@@ -6,6 +6,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'tpope/vim-commentary'
 Plug 'jnurmine/Zenburn'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
