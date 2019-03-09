@@ -23,6 +23,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'jremmen/vim-ripgrep'
 Plug 'darfink/vim-plist'
 Plug 'nvie/vim-flake8'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 
 
@@ -52,6 +53,9 @@ let g:syntastic_check_on_wq = 0
 
 " Fzy
 nnoremap <C-p> :FuzzyOpen<CR>
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
 
 
 " Look & feel
