@@ -21,6 +21,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'jremmen/vim-ripgrep'
+Plug 'darfink/vim-plist'
+Plug 'nvie/vim-flake8'
 call plug#end()
 
 
