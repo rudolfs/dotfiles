@@ -1,4 +1,12 @@
-call plug#begin('~/dotfiles/.config/nvim/plugged')
+" download vim-plug if missing
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent! !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  silent! autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
+call plug#begin('~/.local/share/nvim/plugged')
 Plug 'jnurmine/Zenburn'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -23,7 +31,7 @@ call plug#end()
 syntax on
 set mouse-=a
 set termguicolors
-colorscheme zenburn
+silent! colorscheme zenburn
 
 " Highlight unwanted whitespace
 highlight RedundantWhitespace ctermbg=red guibg=red
@@ -64,10 +72,10 @@ au BufRead,BufNewFile *.rabl setf ruby
 " Unmap stupid man page lookup
 map K <nop>
 
-:command WQ wq
-:command Wq wq
-:command W w
-:command Q q
+:command! WQ wq
+:command! Wq wq
+:command! W w
+:command! Q q
 
 " Reselect visual block after indent/outdent
 vnoremap < <gv
