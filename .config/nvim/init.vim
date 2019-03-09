@@ -47,6 +47,8 @@ let g:airline_theme='zenburn'
 " Syntastic
 let g:syntastic_ruby_checkers=['rubocop', 'tslint', 'reek']
 let g:syntastic_haskell_checkers=['hdevtools', 'hlint', 'ghc_mod']
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_check_on_wq = 0
 
 " Fuzzyfinder
 nmap <C-P> :FZF<CR>
