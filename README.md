@@ -1,1 +1,1 @@
-Home is where the dotfiles are.
+$HOME is where the dotfiles are.
