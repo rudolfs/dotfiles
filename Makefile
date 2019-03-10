@@ -10,3 +10,4 @@ link:
 install:
 	brew install fzy
 	brew install rg
+	brew install gnupg # required by asdf
