@@ -16,12 +16,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'jremmen/vim-ripgrep'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'scrooloose/syntastic'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'darfink/vim-plist'
-Plug 'eagletmt/ghcmod-vim'
-Plug 'nvie/vim-flake8'
+Plug 'w0rp/ale'
 call plug#end()
 
 
@@ -42,12 +37,7 @@ nnoremap <C-f> :Rg<SPACE>
 
 " Airline
 let g:airline_theme='zenburn'
-
-" Syntastic
-let g:syntastic_ruby_checkers=['rubocop', 'tslint', 'reek']
-let g:syntastic_haskell_checkers=['hdevtools', 'hlint', 'ghc_mod']
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_check_on_wq = 0
+let g:airline#extensions#ale#enabled = 1
 
 " Fzy
 nnoremap <C-p> :FuzzyOpen<CR>
