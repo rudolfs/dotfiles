@@ -6,23 +6,22 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'tpope/vim-commentary'
 Plug 'jnurmine/Zenburn'
-Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
+Plug 'cloudhead/neovim-fuzzy'
+Plug 'jremmen/vim-ripgrep'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'scrooloose/syntastic'
-Plug 'rainerborene/vim-reek'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'cloudhead/neovim-fuzzy'
-Plug 'eagletmt/ghcmod-vim'
-Plug 'machakann/vim-highlightedyank'
-Plug 'jremmen/vim-ripgrep'
 Plug 'darfink/vim-plist'
+Plug 'eagletmt/ghcmod-vim'
 Plug 'nvie/vim-flake8'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 
 
