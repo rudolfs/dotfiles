@@ -12,4 +12,5 @@ install:
 	brew install fzy
 	brew install rg
 	brew install gnupg # required by asdf
+	brew install pwgen
 	npm install -g neovim
