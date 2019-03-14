@@ -17,6 +17,7 @@ Plug 'cloudhead/neovim-fuzzy'
 Plug 'jremmen/vim-ripgrep'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'w0rp/ale'
+Plug 'janko-m/vim-test'
 call plug#end()
 
 
@@ -44,6 +45,14 @@ nnoremap <C-p> :FuzzyOpen<CR>
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+
+" vim-test
+let test#strategy = 'neovim'
+nmap <silent> 'tn :TestNearest<CR>
+nmap <silent> 'tf :TestFile<CR>
+nmap <silent> 'ts :TestSuite<CR>
+nmap <silent> 'tl :TestLast<CR>
+nmap <silent> 'tg :TestVisit<CR>
 
 
 " Look & feel
@@ -112,6 +121,9 @@ cnoremap <C-e> <End>
 " Insert blank lines without going into insert mode
 nmap t o<ESC>k
 nmap T O<ESC>j
+
+" Exit terminal insert mode
+tmap <C-[> <C-\><C-n>
 
 
 " Misc
