@@ -18,6 +18,7 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'w0rp/ale'
 Plug 'janko-m/vim-test'
+Plug 'elixir-editors/vim-elixir'
 call plug#end()
 
 
