@@ -19,6 +19,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'w0rp/ale'
 Plug 'janko-m/vim-test'
 Plug 'elixir-editors/vim-elixir'
+Plug 'cohama/lexima.vim'
 call plug#end()
 
 
