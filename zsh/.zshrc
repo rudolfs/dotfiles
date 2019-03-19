@@ -22,7 +22,7 @@ alias gc='git commit'
 alias gds='git diff --staged'
 alias gst='git status'
 alias grp='git pull --rebase && git push'
-alias gb='git branch'
+alias gb='gobr'
 alias gp='git pull'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
