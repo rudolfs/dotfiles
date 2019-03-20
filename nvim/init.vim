@@ -62,7 +62,6 @@ nmap <silent> 'tg :TestVisit<CR>
 silent! colorscheme zenburn
 syntax on                 " syntax highlighting on by default
 syntax sync minlines=200  " Faster syntax highlighting
-let g:highlightedyank=300 " set yank highlight duration
 
 set mouse-=a              " disable mouse
 set shortmess=atI         " don't show the intro message when starting Vim
@@ -84,6 +83,7 @@ set novisualbell          " turn off visual bell
 set clipboard+=unnamed    " use global clipboard
 set undofile              " persist undo history across restart
 set undodir=~/.local/share/nvim/undodir
+let g:highlightedyank_highlight_duration = 300
 
 
 " Custom key mappings
