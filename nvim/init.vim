@@ -16,6 +16,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'jremmen/vim-ripgrep'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'w0rp/ale'
 Plug 'janko-m/vim-test'
 Plug 'elixir-editors/vim-elixir'
