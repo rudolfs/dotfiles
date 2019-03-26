@@ -86,8 +86,6 @@ set smartcase             " no ignorecase if Uppercase char present
 set visualbell t_vb=      " turn off error beep/flash
 set novisualbell          " turn off visual bell
 set clipboard+=unnamed    " use global clipboard
-set undofile              " persist undo history across restart
-set undodir=~/.local/share/nvim/undodir
 let g:highlightedyank_highlight_duration = 300
 
 
