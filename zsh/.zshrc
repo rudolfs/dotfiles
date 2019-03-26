@@ -22,7 +22,21 @@ alias gc='git commit'
 alias gds='git diff --staged'
 alias gst='git status'
 alias grp='git pull --rebase && git push'
-alias gb='gobr'
 alias gp='git pull'
+alias gb='gb'
+
+gb() {
+  if [ -n "$1" ]
+  then
+    git branch "$1"
+  else
+    gobr
+  fi
+}
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
+source ~/dotfiles/zsh/.zshrc_local
