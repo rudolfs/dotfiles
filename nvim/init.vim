@@ -145,3 +145,8 @@ au BufRead,BufNewFile *.rabl setf ruby
 
 " Spellcheck Git commit messages
 autocmd BufRead COMMIT_EDITMSG setlocal spell!
+
+
+" Language specific stuff
+
+au FileType go setlocal ts=4 sw=4 noexpandtab
