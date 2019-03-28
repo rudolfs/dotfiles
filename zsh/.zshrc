@@ -1,13 +1,22 @@
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export ZSH=/Users/rudolfs/.oh-my-zsh
+export ZSH="$HOME/.local/share/oh-my-zsh"
 
-export EDITOR=nvim
-ZSH_THEME="rudolfs"
-
-plugins=(git ssh-agent)
+if ! [ -d $ZSH ]; then
+  git clone https://github.com/robbyrussell/oh-my-zsh.git $ZSH
+fi
 
 source $ZSH/oh-my-zsh.sh
+
+source ~/dotfiles/zsh/rudolfs.zsh-theme
+ZSH_THEME="rudolfs"
+
+plugins=(ssh-agent)
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+export EDITOR=nvim
+
+
 
 alias g='rg -i'
 alias sl='ls'
