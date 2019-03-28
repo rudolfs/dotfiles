@@ -39,4 +39,4 @@ gb() {
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
-source ~/dotfiles/zsh/.zshrc_local
+[ -f ~/dotfiles/zsh/.zshrc_local ] && source ~/dotfiles/zsh/.zshrc_local
