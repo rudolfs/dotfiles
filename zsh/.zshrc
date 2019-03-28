@@ -4,12 +4,11 @@ if ! [ -d $ZSH ]; then
   git clone https://github.com/robbyrussell/oh-my-zsh.git $ZSH
 fi
 
+plugins=(ssh-agent)
 source $ZSH/oh-my-zsh.sh
 
 source $HOME/dotfiles/zsh/rudolfs.zsh-theme
 ZSH_THEME="rudolfs"
-
-plugins=(ssh-agent)
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
