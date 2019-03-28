@@ -6,7 +6,7 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-source ~/dotfiles/zsh/rudolfs.zsh-theme
+source $HOME/dotfiles/zsh/rudolfs.zsh-theme
 ZSH_THEME="rudolfs"
 
 plugins=(ssh-agent)
@@ -42,7 +42,8 @@ gb() {
 [ -f /usr/local/opt/fzf/shell/key-bindings.zsh ] &&
   source /usr/local/opt/fzf/shell/key-bindings.zsh
 
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+source $HOME/.asdf/asdf.sh
+source $HOME/.asdf/completions/asdf.bash
 
-[ -f ~/dotfiles/zsh/.zshrc_local ] && source ~/dotfiles/zsh/.zshrc_local
+[ -f $HOME/dotfiles/zsh/.zshrc_local ] &&
+  source $HOME/dotfiles/zsh/.zshrc_local
