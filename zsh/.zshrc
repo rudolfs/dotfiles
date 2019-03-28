@@ -16,8 +16,6 @@ export LANG=en_US.UTF-8
 
 export EDITOR=nvim
 
-
-
 alias g='rg -i'
 alias sl='ls'
 alias v='nvim'
@@ -36,7 +34,7 @@ gb() {
   then
     git branch "$1"
   else
-    gobr
+    git branch | cut -c 3- | fzy | xargs git checkout
   fi
 }
 
