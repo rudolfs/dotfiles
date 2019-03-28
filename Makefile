@@ -10,7 +10,8 @@ link:
 
 install:
 	chsh -s /bin/zsh
-	brew install fzy
+	brew install fzy # for vim
+	brew install fzf # for zsh history (fzy screws up CTRL-j)
 	brew install rg
 	brew install gnupg # required by asdf
 	brew install pwgen

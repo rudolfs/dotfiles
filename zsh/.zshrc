@@ -38,7 +38,9 @@ gb() {
   fi
 }
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Source FZY from default brew install path
+[ -f /usr/local/opt/fzf/shell/key-bindings.zsh ] &&
+  source /usr/local/opt/fzf/shell/key-bindings.zsh
 
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
