@@ -14,7 +14,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'cloudhead/neovim-fuzzy'
-Plug 'jremmen/vim-ripgrep'
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
@@ -27,7 +26,6 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'cohama/lexima.vim'
 call plug#end()
 
-
 " Plugin configuration
 
 " NERDTree
@@ -39,16 +37,13 @@ map <silent> <bar> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 " vim-fugitive
 map 'b :Gblame<CR>
 
-" ripgrep
-set grepprg=rg
-nnoremap <C-f> :Rg<SPACE>
-
 " Airline
 let g:airline_theme='zenburn'
 let g:airline#extensions#ale#enabled = 1
 
 " Fzy
 nnoremap <C-p> :FuzzyOpen<CR>
+nnoremap <C-f> :FuzzyGrep<SPACE>
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
