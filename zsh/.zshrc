@@ -26,12 +26,9 @@ alias gco='git checkout'
 
 # Git
 alias gd='git diff'
-alias ga='git add -p'
 alias gc='git commit'
 alias gds='git diff --staged'
 alias gst='git status'
-alias grp='git pull --rebase && git push'
-alias gp='git pull'
 alias gb='gb'
 
 gb() {
