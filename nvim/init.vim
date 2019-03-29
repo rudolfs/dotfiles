@@ -80,7 +80,6 @@ set ignorecase            " ignore case when searching
 set smartcase             " no ignorecase if Uppercase char present
 set visualbell t_vb=      " turn off error beep/flash
 set novisualbell          " turn off visual bell
-set clipboard+=unnamed    " use global clipboard
 let g:highlightedyank_highlight_duration = 300
 
 
