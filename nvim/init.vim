@@ -88,6 +88,10 @@ let g:highlightedyank_highlight_duration = 300
 " Unmap stupid man page lookup
 map K <nop>
 
+" Convenience
+nnoremap <C-s> :w<CR>
+nnoremap <C-q> :q<CR>
+
 " Remap common command typos
 :command! WQ wq
 :command! Wq wq
