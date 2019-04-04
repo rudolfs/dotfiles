@@ -20,7 +20,7 @@ alias sl='ls'
 alias v='nvim'
 alias vim='nvim'
 alias gco='git checkout'
-alias pwg='printf "%s" $(pwgen -s 20 1)|pbcopy'
+alias pwg='printf "%s" $(pwgen -s 20 1) | tee >(pbcopy) | cat; echo'
 
 # Git
 alias gd='git diff'
