@@ -7,6 +7,7 @@ link:
 	ln -fs $(DOTFILES_DIR)/zsh/zshrc $(HOME)/.zshrc
 	ln -fs $(DOTFILES_DIR)/rg/rgignore $(HOME)/.rgignore
 	ln -fsh $(DOTFILES_DIR)/nvim $(HOME)/.config/nvim
+	ln -fs $(DOTFILES_DIR)/ruby/irbrc $(HOME)/.irbrc
 
 install:
 	chsh -s /bin/zsh
