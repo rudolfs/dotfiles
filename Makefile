@@ -3,6 +3,10 @@ SHELL        := /bin/sh
 
 all: link
 
+keyboard:
+	cp us_lv_de/us_lv_de.* ~/Library/Keyboard\ Layouts/
+	osascript -e "tell application \"System Events\" to log out"
+
 link:
 	ln -fs $(DOTFILES_DIR)/zsh/zshrc $(HOME)/.zshrc
 	ln -fs $(DOTFILES_DIR)/rg/rgignore $(HOME)/.rgignore
