@@ -27,7 +27,7 @@ alias gd='git diff'
 alias gc='git commit'
 alias gds='git diff --staged'
 alias gst='git status'
-alias gbd='git branch | cut -c 3- | fzy | xargs git branch -D'
+alias gbd='git branch | cut -c 3- | fzy | xargs -p git branch -D'
 
 gb() {
   if [ -n "$*" ]
