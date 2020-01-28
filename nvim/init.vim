@@ -23,6 +23,12 @@ Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'janko-m/vim-test'
 Plug 'elixir-editors/vim-elixir'
 Plug 'cohama/lexima.vim'
+Plug 'tpope/vim-surround'
+Plug 'reasonml-editor/vim-reason-plus'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'evanleck/vim-svelte'
 call plug#end()
 
 " Plugin configuration
@@ -45,6 +51,8 @@ nnoremap <C-p> :FuzzyOpen<CR>
 nnoremap <C-f> :FuzzyGrep<SPACE>
 
 " deoplete
+let g:python_host_prog = '/Users/rudolfs/.asdf/installs/python/2.7.10/bin/python'
+let g:python3_host_prog = '/Users/rudolfs/.asdf/installs/python/3.7.2/bin/python'
 let g:deoplete#enable_at_startup = 1
 
 " vim-test
@@ -147,3 +155,10 @@ autocmd BufRead COMMIT_EDITMSG setlocal spell!
 " Language specific stuff
 
 au FileType go setlocal ts=4 sw=4 noexpandtab
+
+let g:LanguageClient_serverCommands = {
+    \ 'reason': ['/usr/local/bin/reason-language-server']
+    \ }
+nnoremap <silent> <cr> :call LanguageClient#textDocument_hover()<cr>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<cr>
+nnoremap <silent> gf :call LanguageClient#textDocument_formatting()<cr>
