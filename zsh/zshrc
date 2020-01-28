@@ -1,19 +1,21 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 export ZSH="$HOME/.local/share/oh-my-zsh"
 
 if ! [ -d $ZSH ]; then
   git clone https://github.com/robbyrussell/oh-my-zsh.git $ZSH
 fi
 
-plugins=(ssh-agent)
+plugins=(ssh-agent gpg-agent)
 source $ZSH/oh-my-zsh.sh
 
 source $HOME/dotfiles/zsh/rudolfs.zsh-theme
 ZSH_THEME="rudolfs"
 
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
 export EDITOR=nvim
+# for GPG passphrase entry
+export GPG_TTY=$(tty)
 
 alias g='rg -i'
 alias sl='ls'
