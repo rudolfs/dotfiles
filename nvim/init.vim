@@ -121,8 +121,3 @@ autocmd VimEnter,WinEnter * match RedundantWhitespace /\s\+$\| \+\ze\t/
 
 " Spellcheck Git commit messages
 autocmd BufRead COMMIT_EDITMSG setlocal spell!
-
-
-" Language specific stuff
-
-au FileType go setlocal ts=4 sw=4 noexpandtab
