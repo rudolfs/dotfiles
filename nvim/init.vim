@@ -21,10 +21,8 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'janko-m/vim-test'
-Plug 'elixir-editors/vim-elixir'
 Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-surround'
-Plug 'reasonml-editor/vim-reason-plus'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
