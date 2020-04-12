@@ -6,27 +6,19 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'jnurmine/Zenburn'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'cloudhead/neovim-fuzzy'
+Plug 'cohama/lexima.vim'
+Plug 'evanleck/vim-svelte'
+Plug 'herringtondarkholme/yats.vim'
+Plug 'jnurmine/zenburn'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'machakann/vim-highlightedyank'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/nerdtree'
-Plug 'cloudhead/neovim-fuzzy'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-Plug 'janko-m/vim-test'
-Plug 'cohama/lexima.vim'
-Plug 'tpope/vim-surround'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'evanleck/vim-svelte'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " Plugin configuration
