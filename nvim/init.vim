@@ -34,25 +34,9 @@ map 'b :Gblame<CR>
 
 " Airline
 let g:airline_theme='zenburn'
-let g:airline#extensions#ale#enabled = 1
 
 " Fzy
 nnoremap <C-p> :FuzzyOpen<CR>
-nnoremap <C-f> :FuzzyGrep<SPACE>
-
-" deoplete
-let g:python_host_prog = '/Users/rudolfs/.asdf/installs/python/2.7.10/bin/python'
-let g:python3_host_prog = '/Users/rudolfs/.asdf/installs/python/3.7.2/bin/python'
-let g:deoplete#enable_at_startup = 1
-
-" vim-test
-let test#strategy = 'neovim'
-nmap <silent> 'tn :TestNearest<CR>
-nmap <silent> 'tf :TestFile<CR>
-nmap <silent> 'ts :TestSuite<CR>
-nmap <silent> 'tl :TestLast<CR>
-nmap <silent> 'tg :TestVisit<CR>
-
 
 " Look & feel
 
@@ -135,9 +119,6 @@ au VimResized * exe "normal! \<c-w>="
 highlight RedundantWhitespace ctermbg=red guibg=red
 autocmd VimEnter,WinEnter * match RedundantWhitespace /\s\+$\| \+\ze\t/
 
-" Proper RABL syntax highlighting
-au BufRead,BufNewFile *.rabl setf ruby
-
 " Spellcheck Git commit messages
 autocmd BufRead COMMIT_EDITMSG setlocal spell!
 
@@ -145,10 +126,3 @@ autocmd BufRead COMMIT_EDITMSG setlocal spell!
 " Language specific stuff
 
 au FileType go setlocal ts=4 sw=4 noexpandtab
-
-let g:LanguageClient_serverCommands = {
-    \ 'reason': ['/usr/local/bin/reason-language-server']
-    \ }
-nnoremap <silent> <cr> :call LanguageClient#textDocument_hover()<cr>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<cr>
-nnoremap <silent> gf :call LanguageClient#textDocument_formatting()<cr>
