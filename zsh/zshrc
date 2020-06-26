@@ -45,7 +45,6 @@ gb() {
   source /usr/local/opt/fzf/shell/key-bindings.zsh
 
 source $HOME/.asdf/asdf.sh
-source $HOME/.asdf/completions/asdf.bash
 
 [ -f $HOME/dotfiles/zsh/zshrc_local ] &&
   source $HOME/dotfiles/zsh/zshrc_local
