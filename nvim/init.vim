@@ -5,13 +5,14 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent! autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+source ~/.config/nvim/coc.vim
+
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'cohama/lexima.vim'
 Plug 'evanleck/vim-svelte'
 Plug 'herringtondarkholme/yats.vim'
 Plug 'jnurmine/zenburn'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'machakann/vim-highlightedyank'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'scrooloose/nerdtree'
@@ -19,6 +20,10 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'rust-lang/rust.vim'
+Plug 'cespare/vim-toml'
+Plug 'rust-lang/rust.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Plugin configuration
@@ -66,6 +71,9 @@ let g:highlightedyank_highlight_duration = 300
 
 " Custom key mappings
 
+" Cause coc floating windows sometimes stay open with ctrl+c
+inoremap <C-c> <Esc>
+
 " Unmap stupid man page lookup
 map K <nop>
 
@@ -90,7 +98,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Spacebar to clean unwanted search highlighting
-:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>:call coc#util#float_hide()<CR>
 
 " Search and replace with confirmation
 map 'r :%s/<C-r><C-w>//gc<Left><Left><Left>
@@ -121,3 +129,58 @@ autocmd VimEnter,WinEnter * match RedundantWhitespace /\s\+$\| \+\ze\t/
 
 " Spellcheck Git commit messages
 autocmd BufRead COMMIT_EDITMSG setlocal spell!
+
+" Make sure we dont' load the rust cargo plugin from rust.vim!
+let g:loaded_rust_vim_plugin_cargo = 1
+" Don't add errors to quickfix if rustfmt fails.
+let g:rustfmt_fail_silently = 1
+let g:rustfmt_autosave = 1
+" coc.vim
+function! SetupCoc()
+  nmap <silent> gd           <Plug>(coc-definition)
+  nmap <silent> gi           <Plug>(coc-implementation)
+  nmap <silent> gr           <Plug>(coc-references)
+  nmap <silent> <leader>/    :CocList --interactive symbols<CR>
+
+  " This is a kind of hack to make <C-Y> not trigger snippet expansion.
+  " We use <C-p><C-n> to insert the selection without triggering anything, and
+  " then close the popup.
+  inoremap <silent><expr> <C-Y> pumvisible() ? "<C-p><C-n><Esc>a" : "\<C-Y>"
+endfunction
+autocmd User CocNvimInit call SetupCoc()
+
+"
+" Quickfix Signs
+"
+sign define quickfix-error text=× texthl=ErrorSign
+
+command! QuickfixSigns call s:QuickfixSigns()
+
+" autocmd BufWrite * sign unplace *
+autocmd CursorHold *.rs silent QuickfixSigns
+
+function! s:QuickfixSigns()
+  silent! cgetfile
+  sign unplace *
+  for dict in getqflist()
+    if dict.type != 'E'
+      continue
+    endif
+    try
+      silent exe "sign"
+          \ "place"
+          \ dict.lnum
+          \ "line=" . string(dict.lnum)
+          \ "name=" . "quickfix-error"
+          \ "file=" . bufname(dict.bufnr)
+    catch
+
+    endtry
+  endfor
+endfunction
+
+
+noremap j gj
+noremap k gk
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
