@@ -14,5 +14,6 @@
 
   "suggest.fixInsertedWord": false,
   "suggest.maxCompleteItemCount": 32,
-  "rust-analyzer.inlayHints.chainingHints": false
+  "rust-analyzer.inlayHints.chainingHints": false,
+  "rust-analyzer.diagnostics.disabled": ["unresolved-proc-macro"]
 }
