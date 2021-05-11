@@ -39,6 +39,7 @@ map 'b :Gblame<CR>
 
 " Airline
 let g:airline_theme='zenburn'
+let g:airline#extensions#scrollbar#enabled = 0
 
 " Fzy
 nnoremap <C-p> :FuzzyOpen<CR>
