@@ -24,6 +24,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
 Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tomlion/vim-solidity'
 call plug#end()
 
 " Plugin configuration
