@@ -150,6 +150,7 @@ function! SetupCoc()
   inoremap <silent><expr> <C-Y> pumvisible() ? "<C-p><C-n><Esc>a" : "\<C-Y>"
 endfunction
 autocmd User CocNvimInit call SetupCoc()
+let g:coc_global_extensions = ['coc-tsserver', 'coc-tslint-plugin', 'coc-svelte', 'coc-rust-analyzer', 'coc-json']
 
 "
 " Quickfix Signs
