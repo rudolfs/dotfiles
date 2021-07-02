@@ -14,7 +14,7 @@ Plug 'evanleck/vim-svelte'
 Plug 'herringtondarkholme/yats.vim'
 Plug 'jnurmine/zenburn'
 Plug 'machakann/vim-highlightedyank'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'json', 'graphql', 'yaml', 'html'] }
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -150,7 +150,7 @@ function! SetupCoc()
   inoremap <silent><expr> <C-Y> pumvisible() ? "<C-p><C-n><Esc>a" : "\<C-Y>"
 endfunction
 autocmd User CocNvimInit call SetupCoc()
-let g:coc_global_extensions = ['coc-tsserver', 'coc-tslint-plugin', 'coc-svelte', 'coc-rust-analyzer', 'coc-json']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-tslint-plugin', 'coc-svelte', 'coc-rust-analyzer', 'coc-json', 'coc-prettier', 'coc-eslint']
 
 "
 " Quickfix Signs
