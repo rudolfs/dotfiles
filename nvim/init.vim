@@ -14,7 +14,6 @@ Plug 'evanleck/vim-svelte'
 Plug 'herringtondarkholme/yats.vim'
 Plug 'jnurmine/zenburn'
 Plug 'machakann/vim-highlightedyank'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'json', 'graphql', 'yaml', 'html'] }
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -185,5 +184,5 @@ endfunction
 
 noremap j gj
 noremap k gk
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+map 'p :Prettier<CR>
