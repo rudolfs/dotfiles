@@ -5,11 +5,8 @@
   "codeLens.enable": false,
   "coc.preferences.useQuickfixForLocations": true,
   "coc.preferences.bracketEnterImprove": false,
-  "coc.preferences.snippets.enable": false,
-  "coc.preferences.formatOnSaveFiletypes": ["rust", "svelte", "ts", "js", "css", "html"],
+  "coc.preferences.formatOnSaveFiletypes": ["rust", "svelte", "typescript", "javascript", "css", "html"],
 
-  "list.maxHeight": 10,
-  "list.autoResize": false,
   "list.extendedSearchMode": false,
 
   "suggest.fixInsertedWord": false,
