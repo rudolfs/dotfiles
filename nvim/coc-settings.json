@@ -1,17 +1,15 @@
 {
-  "diagnostic.enableSign": false,
-  "diagnostic.enableMessage": "always",
-  "diagnostic.checkCurrentLine": true,
-  "codeLens.enable": false,
-  "coc.preferences.useQuickfixForLocations": true,
   "coc.preferences.bracketEnterImprove": false,
   "coc.preferences.formatOnSaveFiletypes": ["rust", "svelte", "typescript", "javascript", "css", "html"],
-
+  "coc.preferences.useQuickfixForLocations": true,
+  "codeLens.enable": false,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.enableMessage": "always",
+  "diagnostic.enableSign": false,
   "list.extendedSearchMode": false,
-
+  "rust-analyzer.inlayHints.chainingHints": false,
+  "rust-analyzer.inlayHints.typeHints": false,
   "suggest.fixInsertedWord": false,
   "suggest.maxCompleteItemCount": 32,
-  "rust-analyzer.inlayHints.typeHints": false,
-  "rust-analyzer.inlayHints.chainingHints": false,
   "svelte.enable-ts-plugin": true
 }
