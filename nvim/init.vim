@@ -126,11 +126,6 @@ autocmd VimEnter,WinEnter * match RedundantWhitespace /\s\+$\| \+\ze\t/
 " Spellcheck Git commit messages
 autocmd BufRead COMMIT_EDITMSG setlocal spell!
 
-" Make sure we dont' load the rust cargo plugin from rust.vim!
-let g:loaded_rust_vim_plugin_cargo = 1
-" Don't add errors to quickfix if rustfmt fails.
-let g:rustfmt_fail_silently = 1
-let g:rustfmt_autosave = 1
 " coc.vim
 function! SetupCoc()
   nmap <silent> gd           <Plug>(coc-definition)
@@ -145,36 +140,6 @@ function! SetupCoc()
 endfunction
 autocmd User CocNvimInit call SetupCoc()
 let g:coc_global_extensions = ['coc-tsserver', 'coc-tslint-plugin', 'coc-svelte', 'coc-rust-analyzer', 'coc-json', 'coc-prettier', 'coc-eslint']
-
-"
-" Quickfix Signs
-"
-sign define quickfix-error text=× texthl=ErrorSign
-
-command! QuickfixSigns call s:QuickfixSigns()
-
-" autocmd BufWrite * sign unplace *
-autocmd CursorHold *.rs silent QuickfixSigns
-
-function! s:QuickfixSigns()
-  silent! cgetfile
-  sign unplace *
-  for dict in getqflist()
-    if dict.type != 'E'
-      continue
-    endif
-    try
-      silent exe "sign"
-          \ "place"
-          \ dict.lnum
-          \ "line=" . string(dict.lnum)
-          \ "name=" . "quickfix-error"
-          \ "file=" . bufname(dict.bufnr)
-    catch
-
-    endtry
-  endfor
-endfunction
 
 " Prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
