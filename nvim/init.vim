@@ -77,10 +77,6 @@ inoremap <C-c> <Esc>
 " Unmap stupid man page lookup
 map K <nop>
 
-" Convenience
-nnoremap <C-s> :w<CR>
-nnoremap <C-q> :q<CR>
-
 " Remap common command typos
 :command! WQ wq
 :command! Wq wq
@@ -114,11 +110,11 @@ cnoremap <C-e> <End>
 nmap t o<ESC>k
 nmap T O<ESC>j
 
-" Exit terminal insert mode
-tmap <C-[> <C-\><C-n>
-
-
 " Misc
+
+" Simple line navigation
+noremap j gj
+noremap k gk
 
 " Resize splits when the window is resized
 au VimResized * exe "normal! \<c-w>="
@@ -180,8 +176,6 @@ function! s:QuickfixSigns()
   endfor
 endfunction
 
-
-noremap j gj
-noremap k gk
+" Prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 map 'p :Prettier<CR>
