@@ -43,6 +43,13 @@ let g:airline#extensions#scrollbar#enabled = 0
 " Fzy
 nnoremap <C-p> :FuzzyOpen<CR>
 
+" coc.vim
+let g:coc_global_extensions = ['coc-tsserver', 'coc-tslint-plugin', 'coc-svelte', 'coc-rust-analyzer', 'coc-json', 'coc-prettier', 'coc-eslint']
+
+" Prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+map 'p :Prettier<CR>
+
 " Look & feel
 
 silent! colorscheme zenburn
@@ -67,7 +74,6 @@ set smartcase             " no ignorecase if Uppercase char present
 set visualbell t_vb=      " turn off error beep/flash
 set novisualbell          " turn off visual bell
 let g:highlightedyank_highlight_duration = 300
-
 
 " Custom key mappings
 
@@ -110,8 +116,6 @@ cnoremap <C-e> <End>
 nmap t o<ESC>k
 nmap T O<ESC>j
 
-" Misc
-
 " Simple line navigation
 noremap j gj
 noremap k gk
@@ -125,22 +129,3 @@ autocmd VimEnter,WinEnter * match RedundantWhitespace /\s\+$\| \+\ze\t/
 
 " Spellcheck Git commit messages
 autocmd BufRead COMMIT_EDITMSG setlocal spell!
-
-" coc.vim
-function! SetupCoc()
-  nmap <silent> gd           <Plug>(coc-definition)
-  nmap <silent> gi           <Plug>(coc-implementation)
-  nmap <silent> gr           <Plug>(coc-references)
-  nmap <silent> <leader>/    :CocList --interactive symbols<CR>
-
-  " This is a kind of hack to make <C-Y> not trigger snippet expansion.
-  " We use <C-p><C-n> to insert the selection without triggering anything, and
-  " then close the popup.
-  inoremap <silent><expr> <C-Y> pumvisible() ? "<C-p><C-n><Esc>a" : "\<C-Y>"
-endfunction
-autocmd User CocNvimInit call SetupCoc()
-let g:coc_global_extensions = ['coc-tsserver', 'coc-tslint-plugin', 'coc-svelte', 'coc-rust-analyzer', 'coc-json', 'coc-prettier', 'coc-eslint']
-
-" Prettier
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-map 'p :Prettier<CR>
