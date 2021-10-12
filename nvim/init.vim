@@ -5,8 +5,6 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent! autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-source ~/.config/nvim/coc.vim
-
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'cloudhead/neovim-fuzzy'
@@ -43,9 +41,8 @@ let g:airline#extensions#scrollbar#enabled = 0
 nnoremap <C-p> :FuzzyOpen<CR>
 
 " coc.vim
+source ~/.config/nvim/coc.vim
 let g:coc_global_extensions = ['coc-tsserver', 'coc-tslint-plugin', 'coc-svelte', 'coc-rust-analyzer', 'coc-json', 'coc-prettier', 'coc-eslint']
-
-" Prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 map 'p :Prettier<CR>
 
