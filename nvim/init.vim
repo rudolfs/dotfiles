@@ -8,20 +8,20 @@ endif
 source ~/.config/nvim/coc.vim
 
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'cloudhead/neovim-fuzzy'
-Plug 'cohama/lexima.vim'
-Plug 'evanleck/vim-svelte'
-Plug 'herringtondarkholme/yats.vim'
-Plug 'jnurmine/zenburn'
-Plug 'machakann/vim-highlightedyank'
 Plug 'scrooloose/nerdtree'
+Plug 'cohama/lexima.vim'
+Plug 'herringtondarkholme/yats.vim'
+Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'jnurmine/zenburn'
 Plug 'rust-lang/rust.vim'
+Plug 'evanleck/vim-svelte'
 Plug 'cespare/vim-toml'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tomlion/vim-solidity'
 call plug#end()
 
