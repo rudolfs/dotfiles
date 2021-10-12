@@ -34,7 +34,7 @@ map \ :NERDTreeToggle<CR>
 map <silent> <bar> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 
 " vim-fugitive
-map 'b :Gblame<CR>
+map 'b :Git blame<CR>
 
 " Airline
 let g:airline_theme='zenburn'
