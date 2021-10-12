@@ -29,7 +29,6 @@ call plug#end()
 
 " NERDTree
 let NERDTreeQuitOnOpen=1
-map \ :NERDTreeToggle<CR>
 " Open NERDTree at the current file
 map <silent> <bar> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 
@@ -77,9 +76,6 @@ let g:highlightedyank_highlight_duration = 300
 
 " Custom key mappings
 
-" Cause coc floating windows sometimes stay open with ctrl+c
-inoremap <C-c> <Esc>
-
 " Unmap stupid man page lookup
 map K <nop>
 
@@ -100,7 +96,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Spacebar to clean unwanted search highlighting
-:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>:call coc#util#float_hide()<CR>
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 " Search and replace with confirmation
 map 'r :%s/<C-r><C-w>//gc<Left><Left><Left>
@@ -111,10 +107,6 @@ map 'R :%s/\s\+$\\| \+\ze\t//g<CR>
 " Better comand-line editing
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
-
-" Insert blank lines without going into insert mode
-nmap t o<ESC>k
-nmap T O<ESC>j
 
 " Simple line navigation
 noremap j gj
