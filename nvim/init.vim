@@ -50,6 +50,8 @@ source ~/.config/nvim/coc.vim
 let g:coc_global_extensions = ['coc-tsserver', 'coc-tslint-plugin', 'coc-svelte', 'coc-rust-analyzer', 'coc-json', 'coc-prettier', 'coc-eslint']
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 map 'p :Prettier<CR>
+" Because coc floating windows sometimes stay open with ctrl+c
+inoremap <C-c> <Esc>
 
 " Look & feel
 
@@ -97,8 +99,9 @@ nnoremap <C-l> <C-w>l
 vnoremap < <gv
 vnoremap > >gv
 
-" Spacebar to clean unwanted search highlighting
-:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+" Spacebar to clean unwanted search highlighting and clean up all coc floating
+" windows
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>:call coc#float#close_all()<CR>
 
 " Search and replace with confirmation
 map 'r :%s/<C-r><C-w>//gc<Left><Left><Left>
