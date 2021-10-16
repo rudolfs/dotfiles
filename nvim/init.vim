@@ -76,7 +76,6 @@ set ignorecase            " ignore case when searching
 set smartcase             " no ignorecase if Uppercase char present
 set visualbell t_vb=      " turn off error beep/flash
 set novisualbell          " turn off visual bell
-set cmdheight=1           " hide extra empty line from the bottom of the screen
 let g:highlightedyank_highlight_duration = 300
 
 " Custom key mappings
