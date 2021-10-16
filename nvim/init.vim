@@ -34,8 +34,13 @@ map <silent> <bar> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 map 'b :Git blame<CR>
 
 " Airline
-let g:airline_theme='zenburn'
-let g:airline#extensions#scrollbar#enabled = 0
+let g:airline_theme = 'zenburn'
+let g:airline_extensions = ['coc', 'searchcount', 'whitespace']
+let g:airline_symbols = {}
+let g:airline_symbols.colnr = ''
+let g:airline_symbols.linenr = ' '
+let g:airline_section_y = '' " hide file encoding
+let g:airline_section_x = '' " hide filetype
 
 " Fzy
 nnoremap <C-p> :FuzzyOpen<CR>
