@@ -21,6 +21,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'evanleck/vim-svelte'
 Plug 'cespare/vim-toml'
 Plug 'tomlion/vim-solidity'
+Plug 'fladson/vim-kitty'
 call plug#end()
 
 " Plugin configuration
