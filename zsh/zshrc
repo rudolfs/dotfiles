@@ -58,4 +58,4 @@ fi
   source $HOME/dotfiles/zsh/zshrc_local
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export TERM=xterm
+export TERM=xterm-256color
