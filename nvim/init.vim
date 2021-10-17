@@ -54,6 +54,9 @@ map 'p :Prettier<CR>
 " Because coc floating windows sometimes stay open with ctrl+c
 inoremap <C-c> <Esc>
 
+" vim-highlightedyank
+let g:highlightedyank_highlight_duration = 300
+
 " Look & feel
 
 silent! colorscheme zenburn
@@ -64,12 +67,10 @@ set mouse-=a              " disable mouse
 set shortmess=atI         " don't show the intro message when starting Vim
 set noshowmode            " don't show the current mode, let airline handle it
 set termguicolors         " 24-bit color
-set colorcolumn=80        " show a visual guide for where the 80th char is
 set tabstop=2             " maximum width of an actual tab character
 set shiftwidth=2          " size of an indent measured in spaces
 set softtabstop=2         " number of spaces in TAB when editing
 set expandtab             " tabs are spaces
-set autoindent            " copy indent from current line when starting new line
 set hlsearch              " highlight searches
 set incsearch             " do incremental searching
 set showmatch             " jump to matches when entering regexp
@@ -77,7 +78,10 @@ set ignorecase            " ignore case when searching
 set smartcase             " no ignorecase if Uppercase char present
 set visualbell t_vb=      " turn off error beep/flash
 set novisualbell          " turn off visual bell
-let g:highlightedyank_highlight_duration = 300
+set autoindent            " copy indent from current line when starting new line
+set colorcolumn=80        " show a visual guide for where the 80th char is
+
+au BufNewFile,BufRead *.rs setlocal colorcolumn=100
 
 " Custom key mappings
 
