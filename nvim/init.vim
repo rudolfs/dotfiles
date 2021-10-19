@@ -131,3 +131,8 @@ autocmd VimEnter,WinEnter * match RedundantWhitespace /\s\+$\| \+\ze\t/
 
 " Spellcheck Git commit messages
 autocmd BufRead COMMIT_EDITMSG setlocal spell!
+
+highlight CocUnderline gui=undercurl
+highlight CocErrorHighlight gui=undercurl
+highlight CocWarningHighlight gui=undercurl
+highlight SpellBad gui=undercurl
