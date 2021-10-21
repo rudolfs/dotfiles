@@ -136,3 +136,6 @@ highlight CocUnderline gui=undercurl
 highlight CocErrorHighlight gui=undercurl
 highlight CocWarningHighlight gui=undercurl
 highlight SpellBad gui=undercurl
+
+" Remove underline from TS object keys
+highlight typescriptObjectLabel gui=bold
