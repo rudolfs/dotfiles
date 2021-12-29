@@ -22,6 +22,7 @@ Plug 'cespare/vim-toml'
 Plug 'evanleck/vim-svelte'
 Plug 'fladson/vim-kitty'
 Plug 'herringtondarkholme/yats.vim'
+Plug 'neoclide/jsonc.vim' " Don't error on comments in JSON.
 Plug 'rust-lang/rust.vim'
 Plug 'tomlion/vim-solidity'
 call plug#end()
