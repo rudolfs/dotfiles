@@ -44,17 +44,7 @@ gb() {
 [ -f /usr/local/opt/fzf/shell/key-bindings.zsh ] &&
   source /usr/local/opt/fzf/shell/key-bindings.zsh
 
-# mac os big sur m1
-if test -f "/usr/local/opt/asdf/asdf.sh"; then
-  . /usr/local/opt/asdf/asdf.sh
-fi
-
-# mac os catalina intel
-if test -f "$HOME/.asdf/asdf.sh"; then
-  . $HOME/.asdf/asdf.sh
-fi
-
 [ -f $HOME/dotfiles/zsh/zshrc_local ] &&
   source $HOME/dotfiles/zsh/zshrc_local
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+. /usr/local/opt/asdf/libexec/asdf.sh
