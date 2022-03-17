@@ -11,6 +11,7 @@ link:
 	ln -fs $(DOTFILES_DIR)/zsh/zshrc $(HOME)/.zshrc
 	ln -fsh $(DOTFILES_DIR)/nvim $(HOME)/.config/nvim
 	ln -fsh $(DOTFILES_DIR)/kitty/kitty.conf $(HOME)/.config/kitty
+	ln -fsh $(DOTFILES_DIR)/ssh/config $(HOME)/.ssh/config
 
 install:
 	chsh -s /bin/zsh

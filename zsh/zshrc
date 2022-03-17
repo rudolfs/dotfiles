@@ -7,7 +7,6 @@ if ! [ -d $ZSH ]; then
   git clone https://github.com/robbyrussell/oh-my-zsh.git $ZSH
 fi
 
-plugins=(ssh-agent gpg-agent)
 source $ZSH/oh-my-zsh.sh
 
 source $HOME/dotfiles/zsh/rudolfs.zsh-theme
