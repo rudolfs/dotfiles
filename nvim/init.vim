@@ -54,6 +54,7 @@ source ~/.config/nvim/coc.vim
 let g:coc_global_extensions = ['coc-tsserver', 'coc-tslint-plugin', 'coc-svelte', 'coc-rust-analyzer', 'coc-json', 'coc-prettier', 'coc-eslint']
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 map 'p :Prettier<CR>
+map 'a <Plug>(coc-codeaction-selected)l
 " Because coc floating windows sometimes stay open with ctrl+c
 inoremap <C-c> <Esc>
 
