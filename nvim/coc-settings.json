@@ -1,6 +1,13 @@
 {
   "coc.preferences.bracketEnterImprove": false,
-  "coc.preferences.formatOnSaveFiletypes": ["rust", "svelte", "typescript", "javascript", "css", "html"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "html",
+    "javascript",
+    "rust",
+    "svelte",
+    "typescript"
+  ],
   "coc.preferences.useQuickfixForLocations": true,
   "codeLens.enable": false,
   "diagnostic.checkCurrentLine": true,
