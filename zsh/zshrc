@@ -39,9 +39,7 @@ gb() {
   fi
 }
 
-# Source FZY from default brew install path
-[ -f /usr/local/opt/fzf/shell/key-bindings.zsh ] &&
-  source /usr/local/opt/fzf/shell/key-bindings.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [ -f $HOME/dotfiles/zsh/zshrc_local ] &&
   source $HOME/dotfiles/zsh/zshrc_local
