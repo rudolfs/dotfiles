@@ -15,12 +15,22 @@ link:
 
 install:
 	chsh -s /bin/zsh
-	brew install fzy # for vim
+	brew install fzy # for neovim
 	brew install fzf # for zsh history (fzy screws up CTRL-j)
 	brew install rg
 	brew install gnupg # required by asdf
 	brew install pwgen
-	npm install -g neovim
+	brew install fd  # neovim telescope dep
+	brew install duf
+	brew install jq
+	brew install htop
+	brew install tree
+	brew install asdf
+	brew install git
+	brew install tig
+	brew install neovim
+	yarn global add neovim # required by neovim Node.js provider
+	pip3 install pynvim --upgrade # required by neovim health#coc#check
 
 tweak:
 	defaults write -g ApplePressAndHoldEnabled -bool false
