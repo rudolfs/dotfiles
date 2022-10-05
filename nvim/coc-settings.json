@@ -19,6 +19,7 @@
   "rust-analyzer.diagnostics.enable": true,
   "rust-analyzer.inlayHints.enable": false,
   "rust-analyzer.checkOnSave.command": "clippy",
+  "suggest.noselect": true,
   "suggest.fixInsertedWord": false,
   "suggest.maxCompleteItemCount": 100,
   "svelte.enable-ts-plugin": true
