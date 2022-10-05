@@ -25,9 +25,15 @@ Plug 'herringtondarkholme/yats.vim'
 Plug 'neoclide/jsonc.vim' " Don't error on comments in JSON.
 Plug 'rust-lang/rust.vim'
 Plug 'tomlion/vim-solidity'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " Plugin configuration
+
+" Telescope
+nnoremap <C-g> <cmd>Telescope live_grep<cr>
 
 " NERDTree
 let NERDTreeQuitOnOpen=1
@@ -55,6 +61,7 @@ let g:coc_global_extensions = ['coc-tsserver', 'coc-tslint-plugin', 'coc-svelte'
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 map 'p :Prettier<CR>
 map 'a <Plug>(coc-codeaction-selected)l
+nmap 't :<C-u>call CocActionAsync('doHover')<CR>
 " Because coc floating windows sometimes stay open with ctrl+c
 inoremap <C-c> <Esc>
 
@@ -67,7 +74,6 @@ silent! colorscheme zenburn
 syntax on                 " syntax highlighting on by default
 syntax sync minlines=200  " Faster syntax highlighting
 
-set mouse-=a              " disable mouse
 set shortmess=atI         " don't show the intro message when starting Vim
 set noshowmode            " don't show the current mode, let airline handle it
 set termguicolors         " 24-bit color
