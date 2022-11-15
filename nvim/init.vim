@@ -91,8 +91,13 @@ set visualbell t_vb=      " turn off error beep/flash
 set novisualbell          " turn off visual bell
 set autoindent            " copy indent from current line when starting new line
 set colorcolumn=80        " show a visual guide for where the 80th char is
+set mouse=                " disable mouse selection
 
 au BufNewFile,BufRead *.rs setlocal colorcolumn=100
+
+" Get rid of the green borders of the split divider
+highlight VertSplit guibg=none
+highlight VertSplit guifg=#627383
 
 " Custom key mappings
 
