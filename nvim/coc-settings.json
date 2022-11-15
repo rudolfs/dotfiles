@@ -3,6 +3,7 @@
   "[css][html][javascript][rust][svelte][typescript]": {
     "coc.preferences.formatOnSave": true
   },
+  "inlayHint.enable": false,
   "coc.preferences.useQuickfixForLocations": true,
   "codeLens.enable": false,
   "diagnostic.checkCurrentLine": true,
@@ -12,8 +13,6 @@
   "list.extendedSearchMode": false,
   "rust-analyzer.checkOnSave.enable": true,
   "rust-analyzer.diagnostics.enable": true,
-  "rust-analyzer.inlayHints.typeHints.enable": false,
-  "rust-analyzer.inlayHints.reborrowHints.enable": "never",
   "rust-analyzer.checkOnSave.command": "clippy",
   "suggest.noselect": true,
   "suggest.fixInsertedWord": false,
