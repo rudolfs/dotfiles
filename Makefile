@@ -12,11 +12,13 @@ link:
 	ln -fsh $(DOTFILES_DIR)/nvim $(HOME)/.config/nvim
 	ln -fsh $(DOTFILES_DIR)/kitty/kitty.conf $(HOME)/.config/kitty
 	ln -fsh $(DOTFILES_DIR)/ssh/config $(HOME)/.ssh/config
+	ln -fsh $(DOTFILES_DIR)/starship/starship.toml $(HOME)/.config/starship.toml
 
 install:
 	chsh -s /bin/zsh
 	brew install fzy # for neovim
 	brew install fzf # for zsh history (fzy screws up CTRL-j)
+	brew install starship
 	brew install rg
 	brew install gnupg # required by asdf
 	brew install pwgen

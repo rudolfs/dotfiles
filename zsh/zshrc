@@ -1,27 +1,17 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export ZSH="$HOME/.local/share/oh-my-zsh"
-
-if ! [ -d $ZSH ]; then
-  git clone https://github.com/robbyrussell/oh-my-zsh.git $ZSH
-fi
-
-source $ZSH/oh-my-zsh.sh
-
-source $HOME/dotfiles/zsh/rudolfs.zsh-theme
-ZSH_THEME="rudolfs"
-
 export EDITOR=nvim
-# for GPG passphrase entry
 export GPG_TTY=$(tty)
 
-alias g='rg -i'
+alias ls='ls --color=auto'
 alias sl='ls'
+alias ll='ls -la'
+
+alias g='rg -i'
 alias v='nvim'
 alias vim='nvim'
 alias gco='git checkout'
-alias pwg='printf "%s" $(pwgen -s 20 1) | tee >(pbcopy) | cat; echo'
 alias find='fd'
 alias df='duf'
 
@@ -53,3 +43,10 @@ if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/google-cloud-sdk/pa
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-sdk/completion.zsh.inc'; fi
+
+eval "$(starship init zsh)"
+# Set kitty tab title via starship
+function set_win_title(){
+    echo -ne "\033]0; $(basename "$PWD") \007"
+}
+precmd_functions+=(set_win_title)
