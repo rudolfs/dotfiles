@@ -11,11 +11,8 @@
   "diagnostic.enableMessage": "always",
   "diagnostic.enableSign": false,
   "list.extendedSearchMode": false,
-  "rust-analyzer.checkOnSave.enable": true,
   "rust-analyzer.diagnostics.enable": true,
-  "rust-analyzer.checkOnSave.command": "clippy",
   "suggest.noselect": true,
-  "suggest.fixInsertedWord": false,
   "suggest.maxCompleteItemCount": 100,
   "svelte.enable-ts-plugin": true
 }
