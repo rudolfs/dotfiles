@@ -28,7 +28,6 @@ Plug 'tomlion/vim-solidity'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'rudolfs/coc-svelte', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
 
 " Plugin configuration
@@ -58,7 +57,7 @@ nnoremap <C-p> :FuzzyOpen<CR>
 
 " coc.vim
 source ~/.config/nvim/coc.vim
-let g:coc_global_extensions = ['coc-tsserver', 'coc-tslint-plugin', 'coc-rust-analyzer', 'coc-json', 'coc-prettier', 'coc-eslint']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-tslint-plugin', 'coc-rust-analyzer', 'coc-json', 'coc-prettier', 'coc-eslint', 'coc-svelte']
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 map 'p :Prettier<CR>
 map 'a <Plug>(coc-codeaction-selected)l
