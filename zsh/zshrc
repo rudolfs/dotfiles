@@ -59,3 +59,28 @@ function set_win_title(){
     echo -ne "\033]0; $(basename "$PWD") \007"
 }
 precmd_functions+=(set_win_title)
+
+# pnpm
+export PNPM_HOME="/Users/rudolfs/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# bun completions
+[ -s "/Users/rudolfs/.bun/_bun" ] && source "/Users/rudolfs/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+source <(jj util completion zsh)
+
+source /Users/rudolfs/.docker/init-zsh.sh || true # Added by Docker Desktop
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/rudolfs/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+alias claude="/Users/rudolfs/.claude/local/claude"
